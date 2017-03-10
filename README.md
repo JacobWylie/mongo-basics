@@ -13,52 +13,52 @@ mongo
 
 <h1>My Notes</h1>
 
-Only works with Homebrew installed
-Mongo Hacker installed
+<p>Only works with Homebrew installed</p>
+<p>Mongo Hacker installed</p>
 
-run ->
-$mongod  - Run in project directory. mongod is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations.
+<p>run -></p>
+<p>$mongod  - Run in project directory. mongod is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations.</p>
 
-in new tab run ->
-$mongo - Use in project directory. launches mongodb shell. Access point to the database.
+<p>in new tab run -></p>
+<p>$mongo - Use in project directory. launches mongodb shell. Access point to the database.</p>
 
-$use <db> - Switch current database to <db> . The mongo shell variable db is set to the current database.
+<p>$use <db> - Switch current database to <db> . The mongo shell variable db is set to the current database.</p>
 
-$show dbs - lists databases that mongo currently has
+<p>$show dbs - lists databases that mongo currently has</p>
 
-$db.<>.insert({JSON object}) - db = current database from $use. post = collections. insert = insert
+<p>$db.<>.insert({JSON object}) - db = current database from $use. post = collections. insert = insert</p>
 
-Querying Collections:
-$db.<>.find() - list docs in collection
-$db.<>.find()[#] - search database
-$db.<>.findOne() - returns one document
+<h3>Querying Collections:</h3>
+<p>$db.<>.find() - list docs in collection</p>
+<p>$db.<>.find()[#] - search database</p>
+<p>$db.<>.findOne() - returns one document</p>
 
-Examples with parameters:
-$db.posts.find({}.{body: false, description: false})
-$db.posts.find({},{title: true})
-db.users.find({}, {_id: true})
-$db.posts.find({title: 'Parenting 101'},{})
+<h3>Examples with parameters: </h3>
+<p>$db.posts.find({}.{body: false, description: false})</p>
+<p>$db.posts.find({},{title: true})</p>
+<p>db.users.find({}, {_id: true})</p>
+<p>$db.posts.find({title: 'Parenting 101'},{})</p>
 
-$or{} - query operator
+<p>$or{} - query operator</p>
 
-$db.find().limit(#) - limits number of documents returned
+<p>$db.find().limit(#) - limits number of documents returned</p>
 
-$Object.keys(db.<>.find()[#]) - returns keys in object
+<p>$Object.keys(db.<>.find()[#]) - returns keys in object</p>
 
-$db.<>.find({}, {title: true}).sort({title: 1}) - will sort titles in alphabetical order
-$db.<>.find({}, {title: true}).sort({title: -1}) descending order
+<p>$db.<>.find({}, {title: true}).sort({title: 1}) - will sort titles in alphabetical order</p>
+<p>$db.<>.find({}, {title: true}).sort({title: -1}) descending order</p>
 
-$load(./<file.js>) - loads file into mongo
+<p>$load(./<file.js>) - loads file into mongo</p>
 
-$db.<>.find({},{title: true}).limit(2).skip(2) - will skip first two documents and display next 2
+<p>$db.<>.find({},{title: true}).limit(2).skip(2) - will skip first two documents and display next 2</p>
 
-$db.<>.count() - amount of entries
+<p>$db.<>.count() - amount of entries</p>
 
-$<>.author - references objectId, can be from another collection
+<p>$<>.author - references objectId, can be from another collection</p>
 
-$db.<>.getIndexes()
-$db.<>.createIndex({title: 1}, {})
-$db.<>.dropIndex('title_1')
+<p>$db.<>.getIndexes()</p>
+<p>$db.<>.createIndex({title: 1}, {})</p>
+<p>$db.<>.dropIndex('title_1')</p>
 
-$db.<>.update() - update
-$db.<>.update({author: ObjectId("58c2a4b7f8bbf8c251da230c")}, {$set: {tags:['foo', 'bar'], title: 'I have been updated'}})
+<p>$db.<>.update() - update</p>
+<p>$db.<>.update({author: ObjectId("58c2a4b7f8bbf8c251da230c")}, {$set: {tags:['foo', 'bar'], title: 'I have been updated'}})</p>
